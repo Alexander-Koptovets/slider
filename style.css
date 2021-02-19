@@ -1,0 +1,431 @@
+.slider {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  height: 650px;
+}
+
+@media (min-width: 500px) {
+  .slider {
+    min-width: 400px;
+    max-width: 500px;
+  }
+
+  .header {
+    min-width: 400px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  body {
+    min-width: 400px;
+    max-width: 500px;
+  }
+}
+
+.slider .previous, .slider .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.slider .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.slider .previous:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.slider .item {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+.item {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.pepermint-tagline {
+  width: 100%;
+  height: 40%;
+  position: absolute;
+  animation: pepermint-tagline 2s;
+}
+
+@keyframes pepermint-tagline {
+  0% {
+    margin-top: -100%;
+    display: none;
+  }
+  50% {
+    display: block;
+    margin-top: -100%;
+  }
+  100% {
+    margin-top: 0;
+    display: block;
+  }
+}
+
+.pepermint-tagline-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.pepermint-tagline-text {
+  position: absolute;
+  width: 80%;
+  margin-top: 30%;
+  margin-left: 10%;
+  animation: pepermint-tagline-text 3s;
+}
+
+@keyframes pepermint-tagline-text {
+  0% {
+    width: 0;
+  }
+  65% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+.new-banner {
+  position: absolute;
+  width: 15%;
+  margin-left: 10%;
+}
+
+.peppermint-new-banner {
+  position: absolute;
+  width: 15%;
+  margin-left: 10%;
+  animation: peppermint-new-banner 3s;
+}
+
+@keyframes peppermint-new-banner {
+  0% {
+    margin-top: -100%;
+  }
+  65% {
+    margin-top: -100%;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+.raspberry-2 {
+  width: 40%;
+  margin-left: 65%;
+  margin-top: 75%;
+  position: absolute;
+  animation-name: raspberry;
+  animation-duration: 2s;
+}
+
+.raspberry-1 {
+  width: 40%;
+  position: absolute;
+  margin-top: 80%;
+  margin-left: -15%;
+  animation-name: raspberry;
+  animation-duration: 2s;
+}
+
+@keyframes raspberry {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 0px;
+  }
+  100% {
+    width: 40%;
+  }
+}
+
+.pepermint-1 {
+  width: 45%;
+  position: absolute;
+  margin-top: 120%;
+  margin-left: 0;
+  animation: pepermint-1 2s;
+}
+
+@keyframes pepermint-1 {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 45%;
+  }
+}
+
+.pepermint-2 {
+  width: 25%;
+  margin-top: 145%;
+  margin-left: 80%;
+  position: absolute;
+  animation: pepermint-2 2s; 
+}
+
+@keyframes pepermint-2 {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 25%;
+  }
+}
+
+.seed-1 {
+  width: 10%;
+  position: absolute;
+  margin-top: 130%;
+  margin-left: 85%;
+  animation: seed 2s; 
+}
+
+.seed-2 {
+  position: absolute;
+  width: 10%;
+  margin-top: 110%;
+  margin-left: 95.5%;
+  animation: seed 2s; 
+}
+
+@keyframes seed {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 10%;
+  }
+}
+
+@keyframes peppermint-product {
+  0% {
+    margin-left: 200%
+  }
+  50% {
+    margin-left: 200;
+  }
+  100% {
+    margin-left: 25%;
+  }
+}
+
+.peppermint-product {
+  position: absolute;
+  margin-left: 25%;
+  margin-top: 90%;
+  width: 50%;
+  height: 25%;
+  animation: peppermint-product 2s; 
+}
+
+.tagline {
+  width: 100%;
+  height: 40%;
+  position: absolute;
+}
+
+.raspberry-tagline {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.raspberry-product-container {
+  position: absolute;
+  margin-left: 25%;
+  margin-top: 90%;
+  width: 50%;
+  height: 25%;
+}
+
+.raspberry-product {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.raspberry-img {
+  width: 60%;
+  margin-top: -25%;
+  margin-left: 60%;
+  animation-name: raspberry-2;
+  animation-duration: 2s;
+}
+
+.raspberry-img-2 {
+  width: 60%;
+  margin-left: 70%;
+  margin-top: -40%;
+  animation-name: raspberry-2;
+  animation-duration: 2s;
+}
+
+@keyframes raspberry-2 {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+.raspberry-1-1 {
+  position: absolute;
+  width: 40%;
+  position: absolute;
+  margin-top: 60%;
+  margin-left: -10%;
+  animation-name: raspberry;
+  animation-duration: 2s;
+}
+
+.lemon {
+  position: absolute;
+  width: 45%;
+  margin-top: 130%;
+  animation-name: lemon;
+  animation-duration: 2s;
+}
+
+@keyframes lemon {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 45%;
+  }
+}
+
+.petal-1 {
+  position: absolute;
+  width: 30%;
+  margin-top: 70%;
+  margin-left: 80%;
+  animation-duration: 2s;
+  animation-name: petal;
+}
+
+@keyframes petal {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 30%;
+  }
+}
+
+.petal-2 {
+  position: absolute;
+  width: 30%;
+  margin-top: 110%;
+  margin-left: -15%;
+  animation-duration: 2s;
+  animation-name: petal;
+}
+
+.shop-now {
+  position: absolute;
+  width: 50%;
+  margin-top: 160%;
+  margin-left: 25%;
+}
+
+.headers .header-next {
+  animation: header 1s;
+}
+
+@keyframes header {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.peach {
+  width: 60%;
+  margin-top: -25%;
+  margin-left: 60%;
+  animation-name: peach;
+  animation-duration: 2s;
+}
+
+@keyframes peach {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+#plug {
+  display: none;
+}
+
+@media landscape {
+  #plug {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slider, .headers {
+    display: none;
+  }
+}
