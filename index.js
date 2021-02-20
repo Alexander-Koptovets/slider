@@ -1,38 +1,64 @@
-let slideIndex = 1;
+const track = document.querySelector('.slider-track');
+const next = document.querySelector('.next');
+const prev = document.querySelector('.prev');
+const item = document.querySelector('.item');
+let itemIndex = 1;
+let value = 0;
 
-showSlides(slideIndex);
+next.addEventListener('click', () => {
+    value -= 400;
 
-function nextSlide() {
-    showSlides(slideIndex += 1);
+    if (value < -800) {
+        value = 0;
+    }
+
+    track.style.transform = `translateX(${value}px)`;
+    showItems(itemIndex += 1);
     showHeaders(headerIndex += 1);
-}
+});
 
-function previousSlide() {
-  showSlides(slideIndex -= 1);
+prev.addEventListener('click', () => {
+    value += 400;
+
+    if (value > 0) {
+        value = -800;
+    }
+
+    track.style.transform = `translateX(${value}px)`;
+    showItems(itemIndex -= 1);
     showHeaders(headerIndex -= 1);
-  
+});
+
+showItems(itemIndex);
+
+function currentItem(n) {
+    showItems(itemIndex = n);
 }
 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    let slides = document.getElementsByClassName("item");
+function showItems(n) {
+    let items = document.getElementsByClassName("item");
     
-    if (n > slides.length) {
-      slideIndex = 1
+    if (n > items.length) {
+        itemIndex = 1
     } 
     if (n < 1) {
-      slideIndex = slides.length
+        itemIndex = items.length
   }
 
-  for (let slide of slides) {
-      slide.style.display = "none";
+  for (let item of items) {
+    item.style.display = "none";
   }
 
-  slides[slideIndex - 1].style.display = "block";
+  items[itemIndex - 1].style.display = "block";
 }
+
+
+
+
+
+
+
+
 
 let headerIndex = 1;
 
